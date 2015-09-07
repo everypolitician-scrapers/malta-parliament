@@ -33,7 +33,7 @@ def scrape_person(url)
     id: url.to_s.split('/').last,
     name: box.css('h1').text.split(' - ').first.sub('Hon. ','').sub(' MP','').tidy,
     faction: box.xpath('.//p[strong[contains(.,"Parliamentary Group:")]]//img/@title').text,
-    email: box.css('a[href*="mailto:"]/@href').text.sub('mailto:',''),
+    email: box.css('a[href*="mailto:"]/@href').text.split('mailto:').drop(1).first,
     image: box.css('img/@src').first.text,
     term: 12,
     source: url.to_s,
