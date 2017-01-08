@@ -1,0 +1,41 @@
+---
+request:
+  method: get
+  uri: http://www.parlament.mt/bonnici-owen
+  body:
+    encoding: US-ASCII
+    string: ''
+  headers:
+    Accept-Encoding:
+    - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+    Accept:
+    - "*/*"
+    User-Agent:
+    - Ruby
+response:
+  status:
+    code: 200
+    message: OK
+  headers:
+    Date:
+    - Sun, 08 Jan 2017 08:21:25 GMT
+    Server:
+    - Microsoft-IIS/6.0
+    X-Powered-By:
+    - ASP.NET
+    X-Ua-Compatible:
+    - IE=EmulateIE9
+    X-Aspnet-Version:
+    - 2.0.50727
+    Set-Cookie:
+    - ASP.NET_SessionId=pyah3z55hqmvrl454qcwam45; path=/; HttpOnly
+    Cache-Control:
+    - private
+    Content-Type:
+    - text/html; charset=utf-8
+    Content-Length:
+    - '27684'
+  body:
+    encoding: UTF-8
+  http_version: 
+recorded_at: Sun, 08 Jan 2017 08:17:41 GMT
