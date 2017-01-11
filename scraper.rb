@@ -43,10 +43,6 @@ class MemberPage < Scraped::HTML
     box.css('img/@src').first.text
   end
 
-  field :term do
-    12
-  end
-
   field :source do
     url.to_s
   end
@@ -65,7 +61,7 @@ end
 
 start = 'http://www.parlament.mt/membersofparliament?l=1'
 data = scrape(start => MembersPage).member_urls.map do |url|
-  scrape(url => MemberPage).to_h
+  scrape(url => MemberPage).to_h.merge(term: 12)
 end
 
 # puts data
