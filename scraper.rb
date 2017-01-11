@@ -10,34 +10,64 @@ require 'scraperwiki'
 # OpenURI::Cache.cache_path = '.cache'
 require 'scraped_page_archive/open-uri'
 
-def noko_for(url)
-  Nokogiri::HTML(open(url).read)
-end
+class MembersPage < Scraped::HTML
+  decorator Scraped::Response::Decorator::AbsoluteUrls
 
-def scrape_list(url)
-  noko = noko_for(url)
-  noko.css('.column2 table td a/@href').each do |href|
-    link = URI.join url, href
-    scrape_person(link)
+  field :member_urls do
+    noko.css('.column2 table td a/@href').map(&:text)
   end
 end
 
-def scrape_person(url)
-  noko = noko_for(url)
-  box = noko.css('div.column2')
-  data = {
-    id:      url.to_s.split('/').last,
-    name:    box.css('h1').text.split(' - ').first.sub('Hon. ', '').sub(' MP', '').tidy,
-    faction: box.xpath('.//strong[contains(.,"Parliamentary Group")]/..//img/@title').text,
-    email:   box.css('a[href*="mailto:"]/@href').text.split('mailto:').drop(1).first,
-    image:   box.css('img/@src').first.text,
-    term:    12,
-    source:  url.to_s,
-  }
-  data[:image] = URI.join(url, data[:image]).to_s unless data[:image].to_s.empty?
-  data[:faction] = 'Partit Nazzjonlista' if data[:faction] == 'PN'
-  ScraperWiki.save_sqlite(%i(id term), data)
+class MemberPage < Scraped::HTML
+  decorator Scraped::Response::Decorator::AbsoluteUrls
+
+  field :id do
+    url.to_s.split('/').last
+  end
+
+  field :name do
+    box.css('h1').text.split(' - ').first.sub('Hon. ', '').sub(' MP', '').tidy
+  end
+
+  field :faction do
+    f = box.xpath('.//strong[contains(.,"Parliamentary Group")]/..//img/@title').text
+    return 'Partit Nazzjonlista' if f == 'PN'
+    f
+  end
+
+  field :email do
+    box.css('a[href*="mailto:"]/@href').text.split('mailto:').drop(1).first
+  end
+
+  field :image do
+    box.css('img/@src').first.text
+  end
+
+  field :term do
+    12
+  end
+
+  field :source do
+    url.to_s
+  end
+
+  private
+
+  def box
+    noko.css('div.column2')
+  end
 end
 
+def scrape(h)
+  url, klass = h.to_a.first
+  klass.new(response: Scraped::Request.new(url: url).response)
+end
+
+start = 'http://www.parlament.mt/membersofparliament?l=1'
+data = scrape(start => MembersPage).member_urls.map do |url|
+  scrape(url => MemberPage).to_h
+end
+
+# puts data
 ScraperWiki.sqliteexecute('DELETE FROM data') rescue nil
-scrape_list('http://www.parlament.mt/membersofparliament?l=1')
+ScraperWiki.save_sqlite(%i(id term), data)
