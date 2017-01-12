@@ -59,8 +59,19 @@ def scrape(h)
   klass.new(response: Scraped::Request.new(url: url).response)
 end
 
+def ex_members_urls
+  [
+    'http://www.parlament.mt/brincat-leo',
+    'http://www.parlament.mt/joe-cassar',
+    'http://www.parlament.mt/fenech-albert',
+  ]
+end
+
 start = 'http://www.parlament.mt/membersofparliament?l=1'
-data = scrape(start => MembersPage).member_urls.map do |url|
+data = (
+  scrape(start => MembersPage).member_urls +
+  ex_members_urls
+).map do |url|
   scrape(url => MemberPage).to_h.merge(term: 12)
 end
 
