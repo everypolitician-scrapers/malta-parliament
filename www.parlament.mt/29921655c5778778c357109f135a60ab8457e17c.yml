@@ -1,0 +1,41 @@
+---
+request:
+  method: get
+  uri: http://www.parlament.mt/joe-cassar
+  body:
+    encoding: US-ASCII
+    string: ''
+  headers:
+    Accept-Encoding:
+    - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+    Accept:
+    - "*/*"
+    User-Agent:
+    - Ruby
+response:
+  status:
+    code: 200
+    message: OK
+  headers:
+    Date:
+    - Thu, 12 Jan 2017 10:23:12 GMT
+    Server:
+    - Microsoft-IIS/6.0
+    X-Powered-By:
+    - ASP.NET
+    X-Ua-Compatible:
+    - IE=EmulateIE9
+    X-Aspnet-Version:
+    - 2.0.50727
+    Set-Cookie:
+    - ASP.NET_SessionId=vg22s4m5atfjqpaym3aqpy55; path=/; HttpOnly
+    Cache-Control:
+    - private
+    Content-Type:
+    - text/html; charset=utf-8
+    Content-Length:
+    - '24466'
+  body:
+    encoding: UTF-8
+  http_version: 
+recorded_at: Thu, 12 Jan 2017 10:19:24 GMT
