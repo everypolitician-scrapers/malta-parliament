@@ -40,7 +40,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :image do
-    box.css('img/@src').first.text
+    box.css('img/@src').first.text rescue nil
   end
 
   field :source do
