@@ -47,10 +47,40 @@ class MemberPage < Scraped::HTML
     url.to_s
   end
 
+  field :start_date do
+    date_from(
+      recent_electoral_history
+                  .scan(/(?:Elected on|Oath of Allegiance|casual elections on)[^:]*\:\s*(\d{1,2}\.\d{1,2}\.\d{2,4})/)
+                  .flatten
+                  .last
+    )
+  end
+
+  field :end_date do
+    date_from(
+      recent_electoral_history
+                  .scan(/(?:Resignation from Parliament)[^:]*\:\s*(\d{1,2}\.\d{1,2}\.\d{2,4})/)
+                  .flatten
+                  .last
+    )
+  end
+
   private
 
   def box
     noko.css('div.column2')
+  end
+
+  def recent_electoral_history
+    noko.xpath('//tr[contains(.,"Electoral History")]')
+        .text
+        .split('Parliament:')
+        .last
+  end
+
+  def date_from(date)
+    return if date.nil?
+    Date.strptime(date, '%d.%m.%y').to_s
   end
 end
 
