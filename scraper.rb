@@ -3,20 +3,15 @@
 # frozen_string_literal: true
 
 require 'pry'
+require 'require_all'
 require 'scraped'
 require 'scraperwiki'
+
+require_rel 'lib'
 
 # require 'open-uri/cached'
 # OpenURI::Cache.cache_path = '.cache'
 require 'scraped_page_archive/open-uri'
-
-class MembersPage < Scraped::HTML
-  decorator Scraped::Response::Decorator::AbsoluteUrls
-
-  field :member_urls do
-    noko.css('.column2 table td a/@href').map(&:text)
-  end
-end
 
 class MemberPage < Scraped::HTML
   decorator Scraped::Response::Decorator::AbsoluteUrls
