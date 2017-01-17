@@ -30,7 +30,26 @@ class MemberPage < Scraped::HTML
     url.to_s
   end
 
+  field :start_date do
+    date_from(electoral_history_data.values.last['Elected on:'])
+  end
+
   private
+
+  def date_from(date)
+    Date.strptime(date, '%d.%m.%y').to_s
+  end
+
+  def electoral_history_data
+    eh = noko.xpath('//td[contains(.,"Electoral History")]/following-sibling::td')
+    terms = eh.first.xpath('descendant::strong').map(&:text).map(&:tidy)
+    data = eh.text
+             .split(Regexp.union(terms))
+             .map(&:tidy).reject(&:empty?)
+             .map { |str| str.split(/(\d\d?\.\d\d?\.\d\d?)/).map(&:tidy) }
+             .map { |arr| Hash[*arr] }
+    terms.zip(data).to_h
+  end
 
   def box
     noko.css('div.column2')
