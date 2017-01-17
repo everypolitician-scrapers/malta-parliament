@@ -50,3 +50,18 @@ describe 'Chris Agius' do
     end
   end
 end
+
+describe 'Clifton Grima' do
+  around { |test| VCR.use_cassette('CliftonGrima', &test) }
+
+  subject do
+    url = 'http://www.parlament.mt/grima-clifton'
+    MemberPage.new(response: Scraped::Request.new(url: url).response)
+  end
+
+  describe 'electoral data' do
+    it 'should return nil for start date' do
+      subject.start_date.must_be_nil
+    end
+  end
+end
