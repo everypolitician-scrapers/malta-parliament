@@ -60,7 +60,7 @@ class MemberPage < Scraped::HTML
     data = eh.text
              .split(Regexp.union(terms))
              .map(&:tidy).reject(&:empty?)
-             .map { |str| str.split(/(\d\d?\.\d\d?\.\d\d?)/).map(&:tidy) }
+             .map { |str| str.split(/(\d\d?\.\d\d?\.\d\d(?:\d\d)?)/).map(&:tidy) }
              .map { |arr| Hash[*arr] }
     terms.zip(data).to_h
   end
