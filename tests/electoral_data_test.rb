@@ -2,8 +2,8 @@
 require_relative './test_helper'
 require_relative '../lib/member_page.rb'
 
-describe MemberPage do
-  around { |test| VCR.use_cassette('MemberPage', &test) }
+describe 'George Vella' do
+  around { |test| VCR.use_cassette('GeorgeVella', &test) }
 
   subject do
     url = 'http://www.parlament.mt/vella-george'
@@ -15,8 +15,23 @@ describe MemberPage do
       subject.start_date.must_equal '2013-03-11'
     end
 
-    it 'should return nil for end date when no end date is given' do
+    it 'should return nil for end date' do
       subject.end_date.must_be_nil
+    end
+  end
+end
+
+describe 'Joe Cassar' do
+  around { |test| VCR.use_cassette('JoeCassar', &test) }
+
+  subject do
+    url = 'http://www.parlament.mt/joe-cassar'
+    MemberPage.new(response: Scraped::Request.new(url: url).response)
+  end
+
+  describe 'electoral data' do
+    it 'should return the end date' do
+      subject.end_date.must_equal '2015-11-03'
     end
   end
 end
