@@ -34,6 +34,12 @@ class MemberPage < Scraped::HTML
     date_from(electoral_history_data.values.last['Elected on:'])
   end
 
+  field :end_date do
+    date = electoral_history_data.values.last['Resignation from Parliament:']
+    return if date.nil?
+    date_from(date)
+  end
+
   private
 
   def date_from(date)
