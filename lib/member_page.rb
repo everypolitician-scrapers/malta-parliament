@@ -31,7 +31,10 @@ class MemberPage < Scraped::HTML
   end
 
   field :start_date do
-    date_from(electoral_history.values.last['Elected on:'])
+    date = electoral_history.values.last['Elected on:'] ||
+           electoral_history.values.last['Elected by casual elections:']
+    return if date.nil?
+    date_from(date)
   end
 
   field :end_date do

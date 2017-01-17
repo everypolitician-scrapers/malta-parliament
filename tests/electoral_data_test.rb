@@ -45,7 +45,7 @@ describe 'Chris Agius' do
   end
 
   describe 'electoral data' do
-    it 'should return start date' do
+    it 'should return start date from member elected in casual election' do
       subject.start_date.must_equal '2013-03-28'
     end
   end
