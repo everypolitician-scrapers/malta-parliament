@@ -31,11 +31,11 @@ class MemberPage < Scraped::HTML
   end
 
   field :start_date do
-    date_from(electoral_history_data.values.last['Elected on:'])
+    date_from(electoral_history.values.last['Elected on:'])
   end
 
   field :end_date do
-    date = electoral_history_data.values.last['Resignation from Parliament:']
+    date = electoral_history.values.last['Resignation from Parliament:']
     return if date.nil?
     date_from(date)
   end
@@ -46,7 +46,7 @@ class MemberPage < Scraped::HTML
     Date.strptime(date, '%d.%m.%y').to_s
   end
 
-  def electoral_history_data
+  def electoral_history
     eh = noko.xpath('//td[contains(.,"Electoral History")]/following-sibling::td')
     terms = eh.first
               .text
