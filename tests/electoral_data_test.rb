@@ -14,5 +14,9 @@ describe MemberPage do
     it 'should have the correct start date' do
       subject.start_date.must_equal '2013-03-11'
     end
+
+    it 'should return nil for end date when no end date is given' do
+      subject.end_date.must_be_nil
+    end
   end
 end
