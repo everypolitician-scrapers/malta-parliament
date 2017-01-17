@@ -35,3 +35,18 @@ describe 'Joe Cassar' do
     end
   end
 end
+
+describe 'Chris Agius' do
+  around { |test| VCR.use_cassette('ChrisAgius', &test) }
+
+  subject do
+    url = 'http://www.parlament.mt/agius-chris'
+    MemberPage.new(response: Scraped::Request.new(url: url).response)
+  end
+
+  describe 'electoral data' do
+    it 'should return start date' do
+      subject.start_date.must_equal '2013-03-28'
+    end
+  end
+end
