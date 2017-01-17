@@ -48,7 +48,12 @@ class MemberPage < Scraped::HTML
 
   def electoral_history_data
     eh = noko.xpath('//td[contains(.,"Electoral History")]/following-sibling::td')
-    terms = eh.first.xpath('descendant::strong').map(&:text).map(&:tidy)
+    terms = eh.first
+              .text
+              .scan(/([A-Z][a-z]+(?:st|nd|rd|th)\sParliament\s?:?)/)
+              .flatten
+              .map(&:tidy)
+
     data = eh.text
              .split(Regexp.union(terms))
              .map(&:tidy).reject(&:empty?)
