@@ -16,3 +16,19 @@ describe MemberPage do
     end
   end
 end
+
+describe 'Joe Cassar' do
+  around { |test| VCR.use_cassette('JoeCassar', &test) }
+
+  subject do
+    url = 'http://www.parlament.mt/joe-cassar'
+    MemberPage.new(response: Scraped::Request.new(url: url).response)
+  end
+
+  describe 'electoral history' do
+    it 'should have an end date' do
+      require 'pry'
+      subject.electoral_history['Twelfth Parliament']['Resignation from Parliament'].must_equal '3.11.15'
+    end
+  end
+end
