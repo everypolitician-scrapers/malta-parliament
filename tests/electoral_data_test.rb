@@ -11,8 +11,8 @@ describe MemberPage do
   end
 
   describe 'electoral history' do
-    it 'should be eight terms long' do
-      subject.electoral_history.count.must_equal 8
+    it 'should be empty' do
+      subject.electoral_history.must_be_empty
     end
   end
 end
