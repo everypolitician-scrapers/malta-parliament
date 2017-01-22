@@ -28,8 +28,7 @@ describe 'Joe Cassar' do
 
   describe 'electoral history' do
     it 'should have an end date' do
-      require 'pry'
-      subject.electoral_history['Twelfth Parliament']['Resignation from Parliament'].must_equal '3.11.15'
+      subject.electoral_history['Twelfth Parliament']['Resignation from Parliament'].must_equal '2015-11-03'
     end
   end
 end
