@@ -7,7 +7,7 @@ class ElectoralHistory < Scraped::HTML
                .split(Regexp.union(term_headings))
                .map(&:tidy).reject(&:empty?)
                .map { |str| str.delete(':') }
-               .map { |str| str.split(/(\d\d?\.\d\d?\.\d\d(?:\d\d)?)/).map(&:tidy) }
+               .map { |str| str.split(/(\d\d\d\d\-\d\d\-\d\d)/).map(&:tidy) }
                .map { |arr| Hash[*arr] }
 
     term_headings.map { |str| str.delete(':') }
