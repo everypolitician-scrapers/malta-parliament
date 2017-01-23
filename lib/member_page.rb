@@ -31,6 +31,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :electoral_history do
+    {}
   end
 
   private
