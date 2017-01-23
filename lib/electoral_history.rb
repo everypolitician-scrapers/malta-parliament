@@ -3,19 +3,25 @@ require 'scraped'
 
 class ElectoralHistory < Scraped::HTML
   def to_h
-    data = noko.text
-               .split(Regexp.union(term_headings))
-               .map(&:tidy).reject(&:empty?)
-               .map { |str| str.delete(':') }
-               .map { |str| str.split(/(\d\d\d\d\-\d\d\-\d\d)/).map(&:tidy) }
-               .map { |arr| Hash[*arr] }
-
-    term_headings.map { |str| str.delete(':') }
-                 .map(&:tidy)
-                 .zip(data).to_h
+    events_by_term
   end
 
   private
+
+  def events
+    noko.text
+        .split(Regexp.union(term_headings))
+        .map(&:tidy).reject(&:empty?)
+        .map { |str| str.delete(':') }
+        .map { |str| str.split(/(\d\d\d\d\-\d\d\-\d\d)/).map(&:tidy) }
+        .map { |arr| Hash[*arr] }
+  end
+
+  def events_by_term
+    term_headings.map { |str| str.delete(':') }
+                 .map(&:tidy)
+                 .zip(events).to_h
+  end
 
   def term_headings
     noko.first
