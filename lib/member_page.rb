@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 require 'scraped'
+require_relative './decorators/formatted_dates.rb'
 
 class MemberPage < Scraped::HTML
   decorator Scraped::Response::Decorator::AbsoluteUrls
+  decorator FormattedDates
 
   field :id do
     url.to_s.split('/').last
