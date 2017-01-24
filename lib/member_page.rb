@@ -30,6 +30,10 @@ class MemberPage < Scraped::HTML
     url.to_s
   end
 
+  field :electoral_history do
+    {}
+  end
+
   private
 
   def box
