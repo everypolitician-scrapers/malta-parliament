@@ -19,7 +19,9 @@ end
 
 start = 'http://www.parlament.mt/membersofparliament?l=1'
 data = scrape(start => MembersPage).member_urls.map do |url|
-  scrape(url => MemberPage).to_h.merge(term: 12)
+  scrape(url => MemberPage).to_h
+                           .reject { |k, _v| k == :electoral_history }
+                           .merge(term: 12)
 end
 
 # puts data
