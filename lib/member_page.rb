@@ -13,6 +13,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :honorific_prefix do
+    name_parts.select { |part| wanted_titles.include? part }.map(&:tidy).join(';')
   end
 
   field :faction do
@@ -39,13 +40,21 @@ class MemberPage < Scraped::HTML
 
   private
 
-  def titles
+  def wanted_titles
     %w(Dr)
   end
 
+  def unwanted_titles
+    %w(Hon. MP)
+  end
+
+  def titles
+    wanted_titles + unwanted_titles
+  end
+
   def name_parts
-    box.css('h1').text.split(' - ').first.sub('Hon. ', '').sub(' MP', '').tidy.split(' ')
-  end 
+    box.css('h1').text.split(' - ').first.split(' ')
+  end
 
   def box
     noko.css('div.column2')
