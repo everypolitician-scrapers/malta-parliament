@@ -13,4 +13,8 @@ describe MemberPage do
   it 'should have a name field with the name of the member without a prefix' do
     subject.name.must_equal 'Albert Fenech'
   end
+
+  it 'should have an honorific_prefix field' do
+    subject.must_respond_to(:honorific_prefix)
+  end
 end
