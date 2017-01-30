@@ -13,6 +13,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :honorific_prefix do
+    name_parts.select { |part| titles.include? part }.map(&:tidy).join(';')
   end
 
   field :faction do
@@ -45,7 +46,7 @@ class MemberPage < Scraped::HTML
 
   def name_parts
     box.css('h1').text.split(' - ').first.sub('Hon. ', '').sub(' MP', '').tidy.split(' ')
-  end 
+  end
 
   def box
     noko.css('div.column2')
