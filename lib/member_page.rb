@@ -12,6 +12,9 @@ class MemberPage < Scraped::HTML
     name_parts.reject { |part| titles.include? part }.map(&:tidy).join(' ')
   end
 
+  field :honorific_prefix do
+  end
+
   field :faction do
     f = box.xpath('.//strong[contains(.,"Parliamentary Group")]/..//img/@title').text
     return 'Partit Nazzjonlista' if f == 'PN'
