@@ -1,0 +1,349 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.parlament.mt/brincat-leo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 16 Feb 2017 16:07:21 GMT
+      Server:
+      - Microsoft-IIS/6.0
+      X-Powered-By:
+      - ASP.NET
+      X-Ua-Compatible:
+      - IE=EmulateIE9
+      X-Aspnet-Version:
+      - 2.0.50727
+      Set-Cookie:
+      - ASP.NET_SessionId=llit2i453zbbmdnoe5nj43v1; path=/; HttpOnly
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '27798'
+    body:
+      encoding: UTF-8
+      string: "\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"
+        \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<head>\r\n<meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\r\n<link
+        rel=\"stylesheet\" type=\"text/css\" href=\"css/parlament.css\" />\r\n\r\n<!--[if
+        IE 7]>\r\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"css/ie7.css\">\r\n<![endif]-->\r\n\r\n<script
+        type=\"text/javascript\" src=\"js/jquery-1.8.2.min.js\"></script>\r\n<script
+        type=\"text/javascript\" src=\"js/jquery.cycle.js\"></script>\r\n<script type=\"text/javascript\"
+        src=\"js/general.js\"></script>\r\n<title>Parlament Ta' Malta</title>\r\n</head>\r\n\r\n<body>\r\n<form
+        name=\"aspnetForm\" method=\"post\" action=\"page.aspx?n=6B559AE56553A1F1BEA642\"
+        id=\"aspnetForm\">\r\n<input type=\"hidden\" name=\"__VIEWSTATE\" id=\"__VIEWSTATE\"
+        value=\"/wEPDwUKMTM2MTcxNzAwMA9kFgJmD2QWAmYPZBYCAgEPZBYIAgEPZBYCZg8WAh4LXyFJdGVtQ291bnQCAxYGAgEPZBYCZg8VAg9ocmVmPSJob21lP2w9MSIESG9tZWQCAw9kFgJmDxUCFWhyZWY9ImNvbnRhY3QtdXM/bD0xIgpDb250YWN0IFVzZAIFD2QWAmYPFQISaHJlZj0ic2l0ZW1hcD9sPTEiB1NpdGVtYXBkAgUPZBYCAgEPFgIfAAIFFgoCAQ9kFgRmDxUCIWhyZWY9InBhcmxpYW1lbnRhcnktYnVzaW5lc3M/bD0xIhZQYXJsaWFtZW50YXJ5IEJ1c2luZXNzZAIBDxYEHwAC/////w8eB1Zpc2libGVoZAICD2QWBGYPFQIbaHJlZj0iYWJvdXQtcGFybGlhbWVudD9sPTEiEEFib3V0IFBhcmxpYW1lbnRkAgEPFgIfAAL/////D2QCAw9kFgRmDxUCHWhyZWY9InJlZmVyZW5jZS1tYXRlcmlhbD9sPTEiElJlZmVyZW5jZSBNYXRlcmlhbGQCAQ8WBB8AAv////8PHwFoZAIED2QWBGYPFQIXaHJlZj0iZ2V0LWludm9sdmVkP2w9MSIMR2V0IEludm9sdmVkZAIBDxYEHwAC/////w8fAWhkAgUPZBYEZg8VAhpocmVmPSJsaXZlLXBhcmxpYW1lbnQ/bD0xIg9MaXZlIFBhcmxpYW1lbnRkAgEPFgQfAAL/////Dx8BaGQCBw8WAh4EVGV4dAUTSG9uLiBMZW8gQnJpbmNhdCBNUGQCCw9kFgQCAQ8WAh8AAgUWCmYPZBYEZg8VAgVtZW51MRlQYXJsaWFtZW50YXJ5PGJyPkJ1c2luZXNzZAIDDxYCHwACBRYKAgEPZBYCZg8VAh9ocmVmPSJwYXJsYW1lbnRhcnktcmVjb3Jkcz9sPTEiF1BhcmxpYW1lbnRhcnkgRG9jdW1lbnRzZAICD2QWAmYPFQIeaHJlZj0ic3RhbmRpbmctY29tbWl0dGVlcz9sPTEiE1N0YW5kaW5nIENvbW1pdHRlZXNkAgMPZBYCZg8VAjJocmVmPSJodHRwOi8vd3d3LnBhcmxhbWVudC5tdC9zZWxjb21tLTExdGhsZWc/bD0xIhlTZWxlY3QgQ29tbWl0dGVlcyBBcmNoaXZlZAIED2QWAmYPFQI0aHJlZj0iaHR0cDovL3d3dy5wYXJsYW1lbnQubXQvcnVsaW5nbGVnaXNsYXRpb24/bD0xIgdSdWxpbmdzZAIFD2QWAmYPFQIVaHJlZj0icGxlbmFyeXNlc3Npb24iEFBsZW5hcnkgU2Vzc2lvbnNkAgEPZBYEZg8VAgVtZW51MhNBYm91dDxicj5QYXJsaWFtZW50ZAIDDxYCHwACBhYMAgEPZBYCZg8VAiJocmVmPSJjb21wb3NpdGlvbm9mcGFybGlhbWVudD9sPTEiGUNvbXBvc2l0aW9uIG9mIFBhcmxpYW1lbnRkAgIPZBYCZg8VAiJocmVmPSJsZWdpc2xhdGl2ZS1pbnN0cnVtZW50cz9sPTEiF0xlZ2lzbGF0aXZlIEluc3RydW1lbnRzZAIDD2QWAmYPFQIfaHJlZj0iaG93LXBhcmxpYW1lbnQtd29ya3M/bD0xIhRIb3cgUGFybGlhbWVudCBXb3Jrc2QCBA9kFgJmDxUCF2hyZWY9Im1pc3Npb25zdGF0ZW1lbnQiEU1pc3Npb24gU3RhdGVtZW50ZAIFD2QWAmYPFQImaHJlZj0ib2JqZWN0aXZlcy1yZXNwb25zaWJpbGl0aWVzP2w9MSIfT2JqZWN0aXZlcyBhbmQgUmVzcG9uc2liaWxpdGllc2QCBg9kFgJmDxUCF2hyZWY9ImNvZGVvZmV0aGljcz9sPTEiDkNvZGUgb2YgRXRoaWNzZAICD2QWBGYPFQIFbWVudTMVUmVmZXJlbmNlPGJyPk1hdGVyaWFsZAIDDxYCHwACAhYEAgEPZBYCZg8VAhdocmVmPSJwdWJsaWNhdGlvbnM/bD0xIgxQdWJsaWNhdGlvbnNkAgIPZBYCZg8VAh5ocmVmPSJyZWxhdGVkLWluZm9ybWF0aW9uP2w9MSITUmVsYXRlZCBJbmZvcm1hdGlvbmQCAw9kFgRmDxUCBW1lbnU0D0dldDxicj5JbnZvbHZlZGQCAw8WAh8AAgUWCgIBD2QWAmYPFQIeaHJlZj0ibWVtYmVyc29mcGFybGlhbWVudD9sPTEiD0NvbnRhY3QgeW91ciBNUGQCAg9kFgJmDxUCGGhyZWY9Im91dHJlYWNoLXByb2c/bD0xIhNPdXRyZWFjaCBQcm9ncmFtbWVzZAIDD2QWAmYPFQIWaHJlZj0ibmV3cy1ldmVudHM/bD0xIg9OZXdzIGFuZCBFdmVudHNkAgQPZBYCZg8VAh5ocmVmPSJjdWx0dXJhbC1hY3Rpdml0aWVzP2w9MSITQ3VsdHVyYWwgQWN0aXZpdGllc2QCBQ9kFgJmDxUCHWhyZWY9InB1YmxpYy1wcm9jdXJlbWVudD9sPTEiElB1YmxpYyBQcm9jdXJlbWVudGQCBA9kFgRmDxUCBW1lbnU1EmxpdmU8YnI+UGFybGlhbWVudGQCAw8WAh8AAgIWBAIBD2QWAmYPFQIaaHJlZj0ibGl2ZS1wYXJsaWFtZW50P2w9MSIOTGl2ZSBTdHJlYW1pbmdkAgIPZBYCZg8VAhRocmVmPSJhdWRpby1hcmNoaXZlIg1BdWRpbyBBcmNoaXZlZAIDDxYCHwACBRYKZg9kFgJmDxUCGWhyZWY9InByaXZhY3ktcG9saWN5P2w9MSIOUHJpdmFjeSBwb2xpY3lkAgEPZBYCZg8VAhVocmVmPSJkaXNjbGFpbWVyP2w9MSIKRGlzY2xhaW1lcmQCAg9kFgJmDxUCFGhyZWY9ImNvcHlyaWdodD9sPTEiCUNvcHlyaWdodGQCAw9kFgJmDxUCImhyZWY9ImFjY2Vzc2liaWxpdHktc3RhdGVtZW50P2w9MSIXQWNjZXNzaWJpbGl0eSBTdGF0ZW1lbnRkAgQPZBYCZg8VAhJocmVmPSJzaXRlbWFwP2w9MSIHU2l0ZW1hcGRk7Z8cMeW/78CbIGI2HpYbyN77qU0=\"
+        />\r\n\r\n<input type=\"hidden\" name=\"__EVENTVALIDATION\" id=\"__EVENTVALIDATION\"
+        value=\"/wEWBgKNqbLXCgL3+pO+CwL3+o+/CwL3+ovECwL3+oe9CwL3+oPCC1pUlHQB0qnhcly2LZ/ODqAduHGT\"
+        />\r\n<div id=\"topshadow\"> </div>\r\n<div id=\"contentArea\"> \r\n  \r\n
+        \ <!-- START OF HEADER -->\r\n\r\n\r\n<div id=\"header\">\r\n    <a href=\"home?l=1\"
+        title=\"Home Page\" class=\"logo\">\r\n        <img src=\"imgs/logo.gif\"
+        alt=\"Parlament Ta' Malta\" title=\"Parlament Ta' Malta Logo\"\r\n            width=\"171\"
+        height=\"92\" /></a>\r\n    <div class=\"firstRow\">\r\n        \r\n                <ul
+        class=\"sitemenu\">\r\n            \r\n                <li><a href=\"home?l=1\"=\"\">\r\n
+        \                   Home</a></li>\r\n            \r\n                <li class=\"separator\">|</li>\r\n
+        \           \r\n                <li><a href=\"contact-us?l=1\"=\"\">\r\n                    Contact
+        Us</a></li>\r\n            \r\n                <li class=\"separator\">|</li>\r\n
+        \           \r\n                <li><a href=\"sitemap?l=1\"=\"\">\r\n                    Sitemap</a></li>\r\n
+        \           \r\n                </ul>\r\n            \r\n       \r\n        \r\n
+        \      \r\n    </div>\r\n    <div class=\"secondRow\">\r\n        <a href=\"docsearch?l=1\"
+        class=\"searchButton\">\r\n            Search Site\r\n        </a>\r\n    </div>\r\n</div>\r\n\r\n
+        \ <!-- END OF HEADER --> \r\n  \r\n  <!-- MAIN CONTENT WILL BE WRAPPED IN
+        A DIV FOR ANY NECCESSARY CSS CONTROL -->\r\n  <div id=\"contentWrapper\">
+        \r\n    <!-- START OF MAIN LEFT COLUMN -->\r\n    <div id=\"mainContent\"
+        class=\"wideTemplate\">\r\n      <div id=\"mainmenu\">\r\n<ul>\r\n<li><a href=\"parliamentary-business?l=1\">Parliamentary<br
+        />Business</a>\r\n<div class=\"dropdown\">\r\n<ul>\r\n<li><a class=\"subheader\"
+        href=\"parlamentary-records?l=1\">Parliamentary Documents</a>\r\n<ul>\r\n<li><a
+        href=\"sittinglegislation?l=1\">Parliamentary sessions</a></li>\r\n<li><a
+        href=\"http://pq.gov.mt/?l=1\" target=\"_blank\">Parliamentary Questions</a></li>\r\n<li><a
+        href=\"actslegislation?l=1\">Acts of Parliament</a></li>\r\n<li><a href=\"billslegislation?l=1\">Bills</a></li>\r\n<li><a
+        href=\"paperslaidcat?l=1\">Papers laid</a></li>\r\n<li><a href=\"statementlegislation?l=1\">Ministerial
+        Statements</a></li>\r\n<li><a href=\"motionlegislation?l=1\">Motions</a></li>\r\n<li><a
+        href=\"petitionlegislation?l=1\">Petitions</a></li>\r\n<li><a href=\"rulinglegislation?l=1\">Rulings</a></li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<span
+        class=\"separator\">&nbsp;</span>\r\n<ul>\r\n<li><a class=\"subheader\" href=\"standing-committees?l=1\">Standing
+        Committees</a>\r\n<ul>\r\n<li><a href=\"housebusinesscommittee?l=1\">House
+        Business Committee</a></li>\r\n<li><a href=\"privilegescommittee?l=1\">Privileges
+        Committee</a></li>\r\n<li><a href=\"publicaccountscommittee?l=1\">Public Accounts
+        Committee</a></li>\r\n<li><a href=\"foreignandeuropeanaffairscommittee?l=1\">Foreign
+        and European Affairs Committee</a></li>\r\n<li><a href=\"socialaffairscommittee?l=1\">Social
+        Affairs Committee</a></li>\r\n<li><a href=\"familyaffaircommittee?l=1\">Family
+        Affairs Committee</a></li>\r\n<li><a href=\"economicandfinancialaffairscommittee?l=1\">Economic
+        and Financial Affairs Committee</a></li>\r\n<li><a href=\"healthcommittee?l=1\">Health
+        Committee</a></li>\r\n<li><a href=\"considerationofbillscommittee?l=1\">Consideration
+        of Bills Committee</a></li>\r\n<li><a href=\"nationalauditofficeaccountscommittee?l=1\">National
+        Audit Office Accounts Committee</a></li>\r\n<li><a href=\"developmentplanning?l=1\">Environment
+        and Development Planning Committee</a></li>\r\n<li><a href=\"capitalofculture?l=1\">Parliamentary
+        Group on the European Capital of Culture</a></li>\r\n<li><a href=\"adjunctconsiderationofbillscommittee?l=1\">Adjunct
+        Consideration of Bills Committee</a></li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<span
+        class=\"separator\">&nbsp;</span>\r\n<ul>\r\n<li><a class=\"subheader\">Select
+        Committees</a>\r\n<ul>\r\n<li><a href=\"selectcomm?l=1\">Select Committee
+        on the appointment of a commissioner and a standing committee on standards,
+        ethics and proper behaviour in public life</a></li>\r\n<li><a href=\"selcomm-11thleg?l=1\">Select
+        Committees - Archive<br /><br /></a></li>\r\n</ul>\r\n</li>\r\n<li><a class=\"subheader\"
+        href=\"parliamentary-delegations?l=1\">Parliamentary Delegations</a>\r\n<ul>\r\n<li><a
+        href=\"pace\">Parliamentary Assembly of the Council of Europe</a></li>\r\n<li><a
+        href=\"ipu\">Inter Parliamentary Union</a></li>\r\n<li><a href=\"pam\">Parliamentary
+        Assembly of the Mediterranean</a></li>\r\n<li><a href=\"paum\">Parliamentary
+        Assembly of the Union for the Mediterranean</a></li>\r\n<li><a href=\"osce\">Parliamentary
+        Assembly of the OSCE</a></li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</div>\r\n</li>\r\n<li><a
+        href=\"about-parliament?l=1\">About<br />Parliament</a>\r\n<div class=\"dropdown\">\r\n<ul>\r\n<li><a
+        class=\"subheader\" href=\"compositionofparliament?l=1\">Composition of Parliament</a>\r\n<ul>\r\n<li><a
+        href=\"http://www.president.gov.mt/mt/Pages/default.aspx\" target=\"_blank\">The
+        President of Malta</a></li>\r\n<li><a href=\"speaker?l=1\">Mr Speaker</a></li>\r\n<li><a
+        href=\"membersofparliament?l=1\">Members of Parliament</a></li>\r\n<li><a
+        href=\"meps?l=1\">Members of European Parliament</a></li>\r\n<li><a href=\"former-mps?l=1\">Association
+        of Former Members of Parliament</a></li>\r\n<li><a href=\"formerspeakers?l=1\">Former
+        Speakers of the House of Representatives</a></li>\r\n</ul>\r\n</li>\r\n<li><a
+        class=\"subheader\" href=\"legislative-instruments?l=1\">Legislative Instruments</a>\r\n<ul>\r\n<li><a
+        href=\"constituion-of-malta?l=1\">Constitution of Malta</a></li>\r\n<li><a
+        href=\"standing-orders?l=1\">Standing Orders</a></li>\r\n<li><a href=\"house-of-representatives?l=1\">House
+        Of Representatives (Privileges and Powers) Ordinance (Cap 113)</a></li>\r\n<li><a
+        href=\"general_election_act?l=1\">General Elections Act (Cap 354)</a></li>\r\n<li><a
+        href=\"electoral-ordinance?l=1\">Electoral (Polling) Ordinance (Cap 102)</a></li>\r\n<li><a
+        href=\"mps-publicemployment?l=1\">Members of Parliament (Public Employment)
+        Act (Cap 472)</a></li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<span class=\"separator\">&nbsp;</span>\r\n<ul>\r\n<li><a
+        class=\"subheader\" href=\"how-parliament-works?l=1\">How Parliament Works<br
+        /></a>\r\n<ul>\r\n<li><a href=\"historicalbackground?l=1\">Historical Background</a></li>\r\n<li><a
+        href=\"thepractiseofparliament?l=1\">Parliament Practice</a></li>\r\n<li><a
+        href=\"parliamentaryprocedures?l=1\">Parliament Procedures</a></li>\r\n<li><a
+        href=\"legislativeprocess?l=1\">Legislative Process</a></li>\r\n</ul>\r\n</li>\r\n<li><a
+        class=\"subheader\" href=\"missionstatement?l=1\">Mission Statement</a></li>\r\n<li><a
+        class=\"subheader\" href=\"objectives-responsibilities?l=1\">Objectives and
+        Responsibilities</a></li>\r\n<li><a class=\"subheader\" href=\"codeofethics?l=1\">Code
+        of Ethics</a>\r\n<ul>\r\n<li><a href=\"codeofethics-mp?l=1\">Members of Parliament</a></li>\r\n<li><a
+        href=\"codeofethics-ministers?l=1\">Ministers, Parliamentary Secretaries and
+        Parliamentary Assistants</a></li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</div>\r\n</li>\r\n<li
+        class=\"separator\">&nbsp;</li>\r\n<li><a href=\"reference-material?l=1\">Reference<br
+        />Material</a>\r\n<div class=\"dropdown\">\r\n<ul>\r\n<li><a class=\"subheader\"
+        href=\"publications?l=1\">Publications</a>\r\n<ul>\r\n<li><a href=\"mill-parlament?l=1&quot;\">mill-Parlament
+        - Periodical</a></li>\r\n<li><a href=\"annual-reports?l=1\">Annual Report</a></li>\r\n<li><a
+        href=\"reports-parliament?l=1\">Reports published by the Speaker - 11th Legislature</a></li>\r\n<li><a
+        href=\"committee-reports?l=1\">Reports by Committees</a></li>\r\n<li><a href=\"mps-passedaway?l=1\">Commemoration
+        of Members of Parliament who passed away</a></li>\r\n<li><a href=\"health-choices\">Health
+        Choices - Proposals of the Parliamentary Working Group on Diabetes Mellitus</a></li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<span
+        class=\"separator\">&nbsp;</span>\r\n<ul>\r\n<li><a class=\"subheader\" href=\"related-information?l=1\">Related
+        Information</a>\r\n<ul>\r\n<li><a href=\"links?l=1\">Links</a></li>\r\n<li><a
+        href=\"fredomofinformation?l=1\">Access to Documents (Freedom of Information</a></li>\r\n<li><a
+        href=\"information-material?l=1\">Information Material</a></li>\r\n<li><a
+        href=\"memoranda-11thleg\">11th Leg Memoranda</a></li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</div>\r\n</li>\r\n<li
+        class=\"separator\">&nbsp;</li>\r\n<li><a href=\"get-involved?l=1\">Get<br
+        />Involved</a>\r\n<div class=\"dropdown\">\r\n<ul>\r\n<li><a class=\"subheader\"
+        href=\"membersofparliament?l=1\">Contact Your MP</a></li>\r\n<li><a class=\"subheader\"
+        href=\"outreach-prog?l=1\">Outreach Programmes</a></li>\r\n<li><a class=\"subheader\"
+        href=\"news-events?l=1\">News and Events</a>\r\n<ul>\r\n<li><a href=\"news?l=1\">Archive</a></li>\r\n<li><a
+        href=\"press-releases?l=1\">Press Releases</a></li>\r\n</ul>\r\n</li>\r\n<li><a
+        class=\"subheader\" href=\"cultural-activities?l=1\">Cultural Activities</a></li>\r\n<li><a
+        class=\"subheader\" href=\"public-procurement\">Public Procurement</a></li>\r\n</ul>\r\n</div>\r\n</li>\r\n</ul>\r\n</div>\r\n\r\n
+        \     <div id=\"subpageContent\" class=\"oldTemplate\">\r\n        <div class=\"column1\">\r\n
+        \           \r\n<table width=\"213\" border=\"0\" cellPadding=\"0\" cellSpacing=\"0\"
+        summary=\"Design Layout\" >\r\n\t<tr>\r\n\t\t<td height=\"20\">\r\n\t\t    \r\n\t
+        \               <table width=\"212\" border=\"0\" cellPadding=\"0\" cellSpacing=\"0\"
+        summary=\"Design Layout\" >\r\n\t                <tr>\r\n\t\t                <td>\r\n\t\t
+        \                   <table width=\"212\" border=\"0\" cellPadding=\"0\" cellSpacing=\"0\"
+        id=\"submenu\" summary=\"Design Layout\">\r\n\t\t\t                    <tr>\r\n\t\t\t\t
+        \                   <td><IMG height=\"36\" src=\"imgs/tab_relatedinfo.gif\"
+        width=\"300\" alt=\"Related Info\"></td>\r\n\t\t\t                    </tr>\r\n\t\t
+        \                   </table>\r\n\t\t                </td>\r\n\t\t            </tr>\t\t
+        \           \r\n\t\t        \r\n\t\t\t\t    \r\n\t\t\t\t    <tr>\r\n\t\t\t\t
+        \       <td>\r\n\t\t\t\t\t        <table width=\"100%\" border=\"0\" cellpadding=\"0\"
+        cellspacing=\"0\" bgcolor=\"#ebebeb\" summary=\"Design Layout\">\r\n\t\t\t\t\t\t
+        \       \r\n\t\t\t\t\t\t        <tr height=\"23\" align=\"left\">\r\n\t\t\t\t\t\t\t
+        \       <td width=\"27\" class=\"arrowcell\" ><img src=\"imgs/arrow_red.gif\"
+        alt=\"Arrow\" width=\"17\" height=\"13\" hspace=\"2\" vspace=\"2\"></td><td
+        align=\"left\" width=\"185\"><a class=\"MenuTextLink\" href=\"parliamentary-business?l=1\">Parliamentary
+        Business</a></td>\r\n\t\t\t\t\t\t        </tr>\r\n\t\t\t\t\t\t\t        \r\n\t\t\t\t\t
+        \       </table>\r\n\t\t                </td>\r\n\t\t            </tr>\r\n\t\t\t\t\r\n\t\t\t\t
+        \   \r\n\t\t\t        <tr>\r\n\t\t\t\t        <td>\r\n\t\t\t\t\t        <div
+        align=\"left\"><IMG src=\"pics/navigation_seperator.gif\" alt=\"Seperator\"
+        width=\"300\" height=\"5\"></div>\r\n\t\t\t\t        </td>\r\n\t\t\t        </tr>\r\n\t\t\t
+        \       \r\n\t\t\t\t    <tr>\r\n\t\t\t\t        <td>\r\n\t\t\t\t\t        <table
+        width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" bgcolor=\"#ebebeb\"
+        summary=\"Design Layout\">\r\n\t\t\t\t\t\t        \r\n\t\t\t\t\t\t        <tr
+        height=\"23\" align=\"left\">\r\n\t\t\t\t\t\t\t        <td width=\"27\" class=\"arrowcell\"
+        ><img src=\"imgs/arrow_red.gif\" alt=\"Arrow\" width=\"17\" height=\"13\"
+        hspace=\"2\" vspace=\"2\"></td><td align=\"left\" width=\"185\"><a class=\"MenuTextLink\"
+        href=\"about-parliament?l=1\">About Parliament</a></td>\r\n\t\t\t\t\t\t        </tr>\r\n\t\t\t\t\t\t\t
+        \       \r\n\t\t\t\t\t        </table>\r\n\t\t                </td>\r\n\t\t
+        \           </tr>\r\n\t\t\t\t\r\n\t\t\t\t    \r\n\t\t\t        <tr>\r\n\t\t\t\t
+        \       <td>\r\n\t\t\t\t\t        <div align=\"left\"><IMG src=\"pics/navigation_seperator.gif\"
+        alt=\"Seperator\" width=\"300\" height=\"5\"></div>\r\n\t\t\t\t        </td>\r\n\t\t\t
+        \       </tr>\r\n\t\t\t        \r\n\t\t\t\t    <tr>\r\n\t\t\t\t        <td>\r\n\t\t\t\t\t
+        \       <table width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"
+        bgcolor=\"#ebebeb\" summary=\"Design Layout\">\r\n\t\t\t\t\t\t        \r\n\t\t\t\t\t\t
+        \       <tr height=\"23\" align=\"left\">\r\n\t\t\t\t\t\t\t        <td width=\"27\"
+        class=\"arrowcell\" ><img src=\"imgs/arrow_red.gif\" alt=\"Arrow\" width=\"17\"
+        height=\"13\" hspace=\"2\" vspace=\"2\"></td><td align=\"left\" width=\"185\"><a
+        class=\"MenuTextLink\" href=\"reference-material?l=1\">Reference Material</a></td>\r\n\t\t\t\t\t\t
+        \       </tr>\r\n\t\t\t\t\t\t\t        \r\n\t\t\t\t\t        </table>\r\n\t\t
+        \               </td>\r\n\t\t            </tr>\r\n\t\t\t\t\r\n\t\t\t\t    \r\n\t\t\t
+        \       <tr>\r\n\t\t\t\t        <td>\r\n\t\t\t\t\t        <div align=\"left\"><IMG
+        src=\"pics/navigation_seperator.gif\" alt=\"Seperator\" width=\"300\" height=\"5\"></div>\r\n\t\t\t\t
+        \       </td>\r\n\t\t\t        </tr>\r\n\t\t\t        \r\n\t\t\t\t    <tr>\r\n\t\t\t\t
+        \       <td>\r\n\t\t\t\t\t        <table width=\"100%\" border=\"0\" cellpadding=\"0\"
+        cellspacing=\"0\" bgcolor=\"#ebebeb\" summary=\"Design Layout\">\r\n\t\t\t\t\t\t
+        \       \r\n\t\t\t\t\t\t        <tr height=\"23\" align=\"left\">\r\n\t\t\t\t\t\t\t
+        \       <td width=\"27\" class=\"arrowcell\" ><img src=\"imgs/arrow_red.gif\"
+        alt=\"Arrow\" width=\"17\" height=\"13\" hspace=\"2\" vspace=\"2\"></td><td
+        align=\"left\" width=\"185\"><a class=\"MenuTextLink\" href=\"get-involved?l=1\">Get
+        Involved</a></td>\r\n\t\t\t\t\t\t        </tr>\r\n\t\t\t\t\t\t\t        \r\n\t\t\t\t\t
+        \       </table>\r\n\t\t                </td>\r\n\t\t            </tr>\r\n\t\t\t\t\r\n\t\t\t\t
+        \   \r\n\t\t\t        <tr>\r\n\t\t\t\t        <td>\r\n\t\t\t\t\t        <div
+        align=\"left\"><IMG src=\"pics/navigation_seperator.gif\" alt=\"Seperator\"
+        width=\"300\" height=\"5\"></div>\r\n\t\t\t\t        </td>\r\n\t\t\t        </tr>\r\n\t\t\t
+        \       \r\n\t\t\t\t    <tr>\r\n\t\t\t\t        <td>\r\n\t\t\t\t\t        <table
+        width=\"100%\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" bgcolor=\"#ebebeb\"
+        summary=\"Design Layout\">\r\n\t\t\t\t\t\t        \r\n\t\t\t\t\t\t        <tr
+        height=\"23\" align=\"left\">\r\n\t\t\t\t\t\t\t        <td width=\"27\" class=\"arrowcell\"
+        ><img src=\"imgs/arrow_red.gif\" alt=\"Arrow\" width=\"17\" height=\"13\"
+        hspace=\"2\" vspace=\"2\"></td><td align=\"left\" width=\"185\"><a class=\"MenuTextLink\"
+        href=\"live-parliament?l=1\">Live Parliament</a></td>\r\n\t\t\t\t\t\t        </tr>\r\n\t\t\t\t\t\t\t
+        \       \r\n\t\t\t\t\t        </table>\r\n\t\t                </td>\r\n\t\t
+        \           </tr>\r\n\t\t\t\t\r\n\t\t\t\t</table>\r\n\t\t\t\t\r\n\t\t</td>\r\n\t</tr>\r\n</table>\r\n\r\n
+        \       </div>\r\n      \t<div class=\"column2\">\r\n      \t    <h1>Hon.
+        Leo Brincat MP</h1>\r\n            <div>\r\n<div>\r\n<table style=\"width:
+        543px; height: 31px;\" border=\"0\" align=\"left\">\r\n<tbody>\r\n<tr>\r\n<td
+        dir=\"ltr\" align=\"left\" valign=\"bottom\"><img title=\"Leo Brincat\" src=\"file.aspx?f=31727\"
+        alt=\"Leo Brincat\" width=\"167\" height=\"187\" /></td>\r\n<td style=\"width:
+        880px;\" valign=\"bottom\">\r\n<p align=\"justify\">&nbsp;<br /><br /><strong>Parliamentary
+        Group: <a onclick=\"function onclick() { function onclick() { function onclick()
+        { MM_popupMsg('NOTICE: You are currently leaving the Secure Government website
+        for a 3rd Party one') } } }\" href=\"http://www.partitlaburista.org\" target=\"_blank\"><img
+        title=\"Partit Laburista\" src=\"file.aspx?f=15551\" alt=\"Partit Laburista\"
+        width=\"71\" height=\"40\" /></a></strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td
+        valign=\"top\"><hr /><span style=\"color: #003300;\"><strong>Contact Details:</strong></span></td>\r\n<td><hr
+        /><span style=\"color: #3366ff;\"><span style=\"color: #000000;\"><strong>Email:<br
+        /></strong></span></span><span style=\"color: #3366ff;\"><span style=\"color:
+        #000000;\"><a href=\"mailto:leo.brincat@parlament.mt\"><span style=\"color:
+        #3366ff;\">leo.brincat@parlament.mt<br /></span></a></span></span><span style=\"color:
+        #3366ff;\"><a href=\"mailto:brincat.leo@gmail.com\"><span style=\"color: #3366ff;\">brincat.leo@gmail.com</span></a></span><span
+        style=\"color: #3366ff;\"><span style=\"color: #000000;\"><a href=\"mailto:leo.brincat@parlament.mt\"><span
+        style=\"color: #3366ff;\"><br /></span></a></span></span>\r\n<p><span style=\"color:
+        #3366ff;\"><span style=\"color: #000000;\"><strong>Website:</strong> <br /><span
+        style=\"color: #3366ff;\"><a href=\"http://www.leobrincat.com\" target=\"_blank\"><span
+        style=\"color: #3366ff;\">www.leobrincat.com</span></a></span></span></span></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td
+        valign=\"top\"><hr /><span style=\"color: #003300;\"><strong>Electoral History:</strong></span></td>\r\n<td><hr
+        /><span style=\"color: #000000;\"><strong><u>Fifth Parliament:<br /><br /></u></strong>Elected
+        on: 11.1.82</span><br /><span style=\"color: #000000;\">Appointed Parliamentary
+        Secretary:16.7.86</span><br /><span style=\"color: #000000;\">Dissolution
+        of Parliament: 13.2.87</span><br /><br /><span style=\"color: #000000;\"><strong><u>Sixth
+        Parliament:</u></strong> </span><br /><br /><span style=\"color: #000000;\">Elected
+        on: 13.5.87</span><br /><span style=\"color: #000000;\">Oath of Allegiance:
+        9.7.87</span><br /><span style=\"color: #000000;\">Dissolution of Parliament:
+        20.1.92</span><br /><br /><span style=\"color: #000000;\"><strong><u>Seventh
+        Parliament:<br /><br /></u></strong>Elected in the 9th Division</span><br
+        /><span style=\"color: #000000;\">Oath of Allegiance: 4.4.92</span><br /><span
+        style=\"color: #000000;\">Dissolution of Parliament: 23.9.96</span><br /><br
+        /><span style=\"color: #000000;\"><u><strong>Eighth Parliament:<br /><br /></strong></u>Elected
+        on: 29.10.96</span><br /><span style=\"color: #000000;\">Appointed Ministry
+        of Commerce: 7.9.98</span><br /><br /><span style=\"color: #000000;\"><u><strong>Ninth
+        Parliament: <br /><br /></strong></u>Elected on: 8.9.98</span><br /><span
+        style=\"color: #000000;\">Oath of Allegiance: 24.10.98</span><br /><span style=\"color:
+        #000000;\">Dissolution of Parliament: 10.3.03</span><br /><br /><span style=\"color:
+        #000000;\"><u><strong>Tenth Parliament:<br /><br /></strong></u>Elected on:
+        14.4.03</span><br /><span style=\"color: #000000;\">Oath of Allegiance: 24.5.03</span><br
+        /><span style=\"color: #000000;\">Dissolution of Parliament: 4.2.08</span><br
+        /><br /><span style=\"color: #000000;\"><u><strong>Eleventh Parliament:<br
+        /><br /></strong></u>Elected on: 12.3.08</span><br /><span style=\"color:
+        #000000;\">Oath of Allegiance: 10.5.08<br /></span><span style=\"color: #000000;\">Dissolution
+        of Parliament: 7.1.13</span><br /><br /><span style=\"color: #000000;\"><span
+        style=\"text-decoration: underline;\"><strong>Twelfth Parliament:<br /><br
+        /></strong></span>Elected on: 11.3.13<br />Sworn in as Minister for&nbsp;the
+        Environment, Sustainable Development and Climate Change: 13.3.13<br />Oath
+        of Allegiance as MP: 6.4.13<br />Ceased as Minister on: 29.04.16<br /></span></td>\r\n</tr>\r\n<tr>\r\n<td
+        valign=\"top\"><hr /><span style=\"color: #003300;\"><strong>European Parliamentary
+        group:</strong></span></td>\r\n<td valign=\"top\"><hr /><img title=\"PES\"
+        src=\"file.aspx?f=15554\" alt=\"PES\" width=\"27\" height=\"36\" /></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n&nbsp;</div>\r\n<p>&nbsp;</p>\r\n
+        \     \t</div>\r\n      </div>      \r\n    </div>\r\n    <!-- END OF MAIN
+        LEFT COLUMN -->\r\n    \r\n  \r\n  <!-- #### Footer #### -->\r\n\r\n<div id=\"footer\">\r\n
+        \   <div class=\"quicknav\">\r\n        \r\n                <div class=\"menu1\">\r\n
+        \                   <h5>\r\n                        Parliamentary<br>Business</h5>\r\n
+        \                        <input type=\"hidden\" name=\"_ctl0:footer:rpt:_ctl0:hdnID\"
+        id=\"_ctl0_footer_rpt__ctl0_hdnID\" value=\"237\" />\r\n                    \r\n
+        \                           <ul>\r\n                        \r\n                            <li><a
+        href=\"parlamentary-records?l=1\"=\"\">\r\n                                Parliamentary
+        Documents</a></li>\r\n                        \r\n                            <li><a
+        href=\"standing-committees?l=1\"=\"\">\r\n                                Standing
+        Committees</a></li>\r\n                        \r\n                            <li><a
+        href=\"http://www.parlament.mt/selcomm-11thleg?l=1\"=\"\">\r\n                                Select
+        Committees Archive</a></li>\r\n                        \r\n                            <li><a
+        href=\"http://www.parlament.mt/rulinglegislation?l=1\"=\"\">\r\n                                Rulings</a></li>\r\n
+        \                       \r\n                            <li><a href=\"plenarysession\"=\"\">\r\n
+        \                               Plenary Sessions</a></li>\r\n                        \r\n
+        \                           </ul>\r\n                        \r\n                </div>\r\n
+        \           \r\n                <div class=\"menu2\">\r\n                    <h5>\r\n
+        \                       About<br>Parliament</h5>\r\n                         <input
+        type=\"hidden\" name=\"_ctl0:footer:rpt:_ctl1:hdnID\" id=\"_ctl0_footer_rpt__ctl1_hdnID\"
+        value=\"238\" />\r\n                    \r\n                            <ul>\r\n
+        \                       \r\n                            <li><a href=\"compositionofparliament?l=1\"=\"\">\r\n
+        \                               Composition of Parliament</a></li>\r\n                        \r\n
+        \                           <li><a href=\"legislative-instruments?l=1\"=\"\">\r\n
+        \                               Legislative Instruments</a></li>\r\n                        \r\n
+        \                           <li><a href=\"how-parliament-works?l=1\"=\"\">\r\n
+        \                               How Parliament Works</a></li>\r\n                        \r\n
+        \                           <li><a href=\"missionstatement\"=\"\">\r\n                                Mission
+        Statement</a></li>\r\n                        \r\n                            <li><a
+        href=\"objectives-responsibilities?l=1\"=\"\">\r\n                                Objectives
+        and Responsibilities</a></li>\r\n                        \r\n                            <li><a
+        href=\"codeofethics?l=1\"=\"\">\r\n                                Code of
+        Ethics</a></li>\r\n                        \r\n                            </ul>\r\n
+        \                       \r\n                </div>\r\n            \r\n                <div
+        class=\"menu3\">\r\n                    <h5>\r\n                        Reference<br>Material</h5>\r\n
+        \                        <input type=\"hidden\" name=\"_ctl0:footer:rpt:_ctl2:hdnID\"
+        id=\"_ctl0_footer_rpt__ctl2_hdnID\" value=\"239\" />\r\n                    \r\n
+        \                           <ul>\r\n                        \r\n                            <li><a
+        href=\"publications?l=1\"=\"\">\r\n                                Publications</a></li>\r\n
+        \                       \r\n                            <li><a href=\"related-information?l=1\"=\"\">\r\n
+        \                               Related Information</a></li>\r\n                        \r\n
+        \                           </ul>\r\n                        \r\n                </div>\r\n
+        \           \r\n                <div class=\"menu4\">\r\n                    <h5>\r\n
+        \                       Get<br>Involved</h5>\r\n                         <input
+        type=\"hidden\" name=\"_ctl0:footer:rpt:_ctl3:hdnID\" id=\"_ctl0_footer_rpt__ctl3_hdnID\"
+        value=\"240\" />\r\n                    \r\n                            <ul>\r\n
+        \                       \r\n                            <li><a href=\"membersofparliament?l=1\"=\"\">\r\n
+        \                               Contact your MP</a></li>\r\n                        \r\n
+        \                           <li><a href=\"outreach-prog?l=1\"=\"\">\r\n                                Outreach
+        Programmes</a></li>\r\n                        \r\n                            <li><a
+        href=\"news-events?l=1\"=\"\">\r\n                                News and
+        Events</a></li>\r\n                        \r\n                            <li><a
+        href=\"cultural-activities?l=1\"=\"\">\r\n                                Cultural
+        Activities</a></li>\r\n                        \r\n                            <li><a
+        href=\"public-procurement?l=1\"=\"\">\r\n                                Public
+        Procurement</a></li>\r\n                        \r\n                            </ul>\r\n
+        \                       \r\n                </div>\r\n            \r\n                <div
+        class=\"menu5\">\r\n                    <h5>\r\n                        live<br>Parliament</h5>\r\n
+        \                        <input type=\"hidden\" name=\"_ctl0:footer:rpt:_ctl4:hdnID\"
+        id=\"_ctl0_footer_rpt__ctl4_hdnID\" value=\"241\" />\r\n                    \r\n
+        \                           <ul>\r\n                        \r\n                            <li><a
+        href=\"live-parliament?l=1\"=\"\">\r\n                                Live
+        Streaming</a></li>\r\n                        \r\n                            <li><a
+        href=\"audio-archive\"=\"\">\r\n                                Audio Archive</a></li>\r\n
+        \                       \r\n                            </ul>\r\n                        \r\n
+        \               </div>\r\n            \r\n    </div>\r\n    <div class=\"footerlinks\">\r\n
+        \      \r\n        \r\n        <a href=\"privacy-policy?l=1\"=\"\">\r\n                                Privacy
+        policy</a>\r\n        \r\n        <a href=\"disclaimer?l=1\"=\"\">\r\n                                Disclaimer</a>\r\n
+        \       \r\n        <a href=\"copyright?l=1\"=\"\">\r\n                                Copyright</a>\r\n
+        \       \r\n        <a href=\"accessibility-statement?l=1\"=\"\">\r\n                                Accessibility
+        Statement</a>\r\n        \r\n        <a href=\"sitemap?l=1\"=\"\">\r\n                                Sitemap</a>\r\n
+        \       \r\n        \r\n    </div>\r\n</div>\r\n\r\n  <div id=\"alertsignature\">
+        <a href=\"http://www.alert.com.mt\">\r\n      <img id=\"_ctl0_imgAlert\" title=\"Alert
+        Logo\" src=\"imgs/design_dev_1.jpg\" border=\"0\" height=\"43\" width=\"371\"
+        /></a> </div>\r\n</div>\r\n</div>\r\n</form>\r\n</body>\r\n</html>\r\n\r\n"
+    http_version: 
+  recorded_at: Thu, 16 Feb 2017 16:03:02 GMT
+recorded_with: VCR 3.0.3
