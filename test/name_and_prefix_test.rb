@@ -17,4 +17,8 @@ describe MemberPage do
   it 'should have an honorific_prefix field' do
     subject.must_respond_to(:honorific_prefix)
   end
+
+  it 'should store any titles in the honorific_prefix field' do
+    subject.honorific_prefix.must_equal 'Dr'
+  end
 end
