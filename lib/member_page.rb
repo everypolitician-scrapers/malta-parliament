@@ -9,7 +9,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :name do
-    box.css('h1').text.split(' - ').first.sub('Hon. ', '').sub(' MP', '').tidy
+    name_parts.reject { |part| titles.include? part }.map(&:tidy).join(' ')
   end
 
   field :faction do
@@ -35,6 +35,14 @@ class MemberPage < Scraped::HTML
   end
 
   private
+
+  def titles
+    %w(Dr)
+  end
+
+  def name_parts
+    box.css('h1').text.split(' - ').first.sub('Hon. ', '').sub(' MP', '').tidy.split(' ')
+  end 
 
   def box
     noko.css('div.column2')
