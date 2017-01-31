@@ -19,4 +19,9 @@ describe MemberPage do
   it 'should respond to electoral_history' do
     subject.must_respond_to :electoral_history
   end
+
+  it 'should have an end date for the twelfth term' do
+    subject.electoral_history['Twelfth Parliament']['Resignation from Parliament']
+           .must_equal '2015-11-03'
+  end
 end
