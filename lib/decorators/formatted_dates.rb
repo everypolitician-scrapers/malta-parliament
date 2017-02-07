@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require 'scraped'
 
+# Turns a date like 1.1.64 into a preferred format: 1964-01-01
 class FormattedDates < Scraped::Response::Decorator
   def body
     Nokogiri::HTML(super).tap do |doc|
