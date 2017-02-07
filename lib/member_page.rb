@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 require 'scraped'
 require_relative './decorators/formatted_dates'
+require_relative 'electoral_history'
 
 class MemberPage < Scraped::HTML
   decorator Scraped::Response::Decorator::AbsoluteUrls
@@ -33,7 +34,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :electoral_history do
-    {}
+    (fragment noko.xpath('//td[contains(.,"Electoral History")]/following-sibling::td') => ElectoralHistory).events_by_term
   end
 
   private
