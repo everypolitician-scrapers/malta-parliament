@@ -2,8 +2,10 @@
 require 'scraped'
 
 class ElectoralHistory < Scraped::HTML
-  def to_h
-    events_by_term
+  field :events_by_term do
+    term_headings.map { |str| str.delete(':') }
+                 .map(&:tidy)
+                 .zip(events).to_h
   end
 
   private
@@ -15,12 +17,6 @@ class ElectoralHistory < Scraped::HTML
         .map { |str| str.delete(':') }
         .map { |str| str.split(/(\d\d\d\d\-\d\d\-\d\d)/).map(&:tidy) }
         .map { |arr| Hash[*arr] }
-  end
-
-  def events_by_term
-    term_headings.map { |str| str.delete(':') }
-                 .map(&:tidy)
-                 .zip(events).to_h
   end
 
   def term_headings
