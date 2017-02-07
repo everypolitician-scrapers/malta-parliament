@@ -5,6 +5,6 @@ require_relative './electoral_history'
 
 class ExMemberPage < MemberPage
   field :electoral_history do
-    (fragment noko.xpath('//td[contains(.,"Electoral History")]/following-sibling::td') => ElectoralHistory).to_h
+    (fragment noko.xpath('//td[contains(.,"Electoral History")]/following-sibling::td') => ElectoralHistory).events_by_term
   end
 end
