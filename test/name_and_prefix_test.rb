@@ -12,15 +12,16 @@ describe MemberPage do
     end
 
     it 'should have a name field with the name of the member without a prefix' do
-      subject.name.must_equal 'Albert Fenech'
-    end
-
-    it 'should have an honorific_prefix field' do
-      subject.must_respond_to(:honorific_prefix)
-    end
-
-    it 'should store any titles in the honorific_prefix field' do
-      subject.honorific_prefix.must_equal 'Dr'
+      subject.to_h.must_equal(
+        id:                'fenech-albert',
+        name:              'Albert Fenech',
+        honorific_prefix:  'Dr',
+        faction:           '',
+        email:             'albert.fenech@gov.mt',
+        image:             'http://www.parlament.mt/file.aspx?f=33193',
+        source:            'http://www.parlament.mt/fenech-albert',
+        electoral_history: {}
+      )
     end
   end
 
@@ -32,12 +33,17 @@ describe MemberPage do
       MemberPage.new(response: Scraped::Request.new(url: url).response)
     end
 
-    it 'should leave a non prefixed name unchanged' do
-      subject.name.must_equal 'Ian Borg'
-    end
-
-    it 'should not return a prefix when none is present in the name' do
-      subject.honorific_prefix.must_be_empty
+    it 'should contain the expected data' do
+      subject.to_h.must_equal(
+        id:                'borg-ian',
+        name:              'Ian Borg',
+        honorific_prefix:  '',
+        faction:           'Partit Laburista',
+        email:             'ian.borg@gov.mt',
+        image:             'http://www.parlament.mt/file.aspx?f=31734',
+        source:            'http://www.parlament.mt/borg-ian',
+        electoral_history: {}
+      ).must_equal true
     end
   end
 end
