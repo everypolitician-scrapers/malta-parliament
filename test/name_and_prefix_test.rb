@@ -3,14 +3,11 @@ require_relative './test_helper'
 require_relative '../lib/member_page.rb'
 
 describe MemberPage do
+  subject { MemberPage.new(response: Scraped::Request.new(url: url).response) }
+  around { |test| VCR.use_cassette(url.split('/').last.split('-').map(&:capitalize).reverse.join(''), &test) }
+
   describe 'Dr Albert Fenech' do
-    around { |test| VCR.use_cassette('AlbertFenech', &test) }
-
-    subject do
-      url = 'http://www.parlament.mt/fenech-albert'
-      MemberPage.new(response: Scraped::Request.new(url: url).response)
-    end
-
+    let(:url) { 'http://www.parlament.mt/fenech-albert' }
     it 'should have a name field with the name of the member without a prefix' do
       subject.to_h.must_equal(
         id:                'fenech-albert',
@@ -26,12 +23,7 @@ describe MemberPage do
   end
 
   describe 'Ian Borg' do
-    around { |test| VCR.use_cassette('IanBorg', &test) }
-
-    subject do
-      url = 'http://www.parlament.mt/borg-ian'
-      MemberPage.new(response: Scraped::Request.new(url: url).response)
-    end
+    let(:url) { 'http://www.parlament.mt/borg-ian' }
 
     it 'should contain the expected data' do
       subject.to_h.must_equal(
@@ -43,7 +35,7 @@ describe MemberPage do
         image:             'http://www.parlament.mt/file.aspx?f=31734',
         source:            'http://www.parlament.mt/borg-ian',
         electoral_history: {}
-      ).must_equal true
+      )
     end
   end
 end
