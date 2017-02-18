@@ -1,8 +1,9 @@
 # frozen_string_literal: true
+require 'minitest/around/spec'
 require 'minitest/autorun'
+require 'pry'
 require 'vcr'
 require 'webmock'
-require 'minitest/around/spec'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'test/cassettes'
