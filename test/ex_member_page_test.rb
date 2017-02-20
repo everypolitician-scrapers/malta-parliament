@@ -3,7 +3,7 @@ require_relative './test_helper'
 require_relative '../lib/ex_member_page.rb'
 
 describe ExMemberPage do
-  around { |test| VCR.use_cassette(url.split('/').last.split('-').map(&:capitalize).join(''), &test) }
+  around { |test| VCR.use_cassette(File.basename(url), &test) }
 
   let(:yaml_data) { YAML.load_file(subject) }
   let(:url)       { yaml_data[:url] }
