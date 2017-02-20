@@ -11,7 +11,13 @@ class ElectoralHistory < Scraped::HTML
   private
 
   def events
+    # The page of one member contains a line
+    # of text that does not contain a date.
+    # As a result, this line runs on to the second.
+    # To avoid this, the gsub removes this line.
+    # Issue: https://github.com/everypolitician-scrapers/malta-parliament/issues/13
     noko.text
+        .gsub('Elected in the 9th Division', '')
         .split(Regexp.union(term_headings))
         .map(&:tidy).reject(&:empty?)
         .map { |str| str.delete(':') }
