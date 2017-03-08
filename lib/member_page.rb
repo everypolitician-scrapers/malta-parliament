@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 require 'scraped'
+require_relative './decorators/formatted_dates'
 
 class MemberPage < Scraped::HTML
   decorator Scraped::Response::Decorator::AbsoluteUrls
+  decorator FormattedDates
 
   field :id do
     url.to_s.split('/').last
@@ -27,7 +29,7 @@ class MemberPage < Scraped::HTML
   end
 
   field :image do
-    box.css('img/@src').first.text
+    img = box.css('img/@src').first and img.text
   end
 
   field :source do
