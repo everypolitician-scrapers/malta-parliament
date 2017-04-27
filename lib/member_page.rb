@@ -18,7 +18,7 @@ class MemberPage < Scraped::HTML
 
   field :faction do
     f = box.xpath('.//strong[contains(.,"Parliamentary Group")]/..//img/@title').text
-    return 'Partit Nazzjonlista' if f == 'PN'
+    return 'Partit Nazzjonalista' if f == 'PN'
     f
   end
 
