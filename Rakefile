@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'rubocop/rake_task'
 require 'rake/testtask'
 RuboCop::RakeTask.new
@@ -11,4 +12,4 @@ Rake::TestTask.new do |t|
 end
 
 task test: 'test:data'
-task default: %w(rubocop test)
+task default: %w[rubocop test]

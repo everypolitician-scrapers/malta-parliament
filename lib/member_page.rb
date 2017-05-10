@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'scraped'
 
 class MemberPage < Scraped::HTML
@@ -41,11 +42,11 @@ class MemberPage < Scraped::HTML
   private
 
   def wanted_titles
-    %w(Dr)
+    %w[Dr]
   end
 
   def unwanted_titles
-    %w(Hon. MP)
+    %w[Hon. MP]
   end
 
   def titles
