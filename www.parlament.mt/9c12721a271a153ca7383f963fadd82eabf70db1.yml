@@ -18,7 +18,7 @@ response:
     message: OK
   headers:
     Date:
-    - Tue, 09 May 2017 15:31:44 GMT
+    - Wed, 10 May 2017 11:33:32 GMT
     Server:
     - Microsoft-IIS/6.0
     X-Powered-By:
@@ -28,7 +28,7 @@ response:
     X-Aspnet-Version:
     - 2.0.50727
     Set-Cookie:
-    - ASP.NET_SessionId=xlemj12fkixxqa45kyspvj55; path=/; HttpOnly
+    - ASP.NET_SessionId=ovfmzie3tj3anl452lewa555; path=/; HttpOnly
     Cache-Control:
     - private
     Content-Type:
@@ -38,4 +38,4 @@ response:
   body:
     encoding: UTF-8
   http_version: 
-recorded_at: Tue, 09 May 2017 15:31:15 GMT
+recorded_at: Wed, 10 May 2017 11:33:02 GMT
